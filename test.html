@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="The one Garage to rule them all. We represent Big Garage, the garage industrial complex."
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <link
+      href="./output.css"
+      rel="stylesheet"
+    />
+
+    <title>SmartParking Dashboard</title>
+  </head>
+
+  <body class="overflow-x-hidden bg-gray-900">
+    <div
+      class="mx-auto flex min-h-screen max-w-350 flex-col bg-gray-900 md:flex-row md:items-start"
+    >
+      <nav
+        class="m-2 flex flex-col rounded-lg border border-gray-600 bg-gray-800 text-2xl text-white shadow-lg shadow-black/50 md:w-64 ..."
+      >
+        <div class="flex flex-col items-center gap-2">
+          <picture class="shrink-0">
+            <source
+              media="(max-width: 768px) "
+              srcset="big_garage_small.webp"
+            />
+            <img
+              src="logo.webp"
+              class="block h-auto w-32 max-w-none md:w-64"
+              alt="Big Garage Logo"
+            />
+          </picture>
+        </div>
+        <!-- 
+size-20 = width: 5rem;
+          height: 5rem;
+w-32    = width: 8rem; -->
+        <div class="mb-4 flex justify-center gap-4 md:flex-col md:gap-2">
+          <a
+            aria-label="Översikt"
+            href="#"
+            class="menu-link"
+          >
+            <i
+              data-lucide="layout-dashboard"
+              class="menu-icon"
+            ></i>
+            <span class="hidden md:inline">Översikt</span>
+          </a>
+
+          <a
+            aria-label="Parkeringar"
+            href="#"
+            class="menu-link"
+          >
+            <i
+              data-lucide="car"
+              class="menu-icon"
+            ></i>
+            <span class="hidden md:inline">Parkeringar</span>
+          </a>
+
+          <a
+            aria-label="Felanmälningar"
+            href="#"
+            class="menu-link"
+          >
+            <i
+              data-lucide="alert-triangle"
+              class="menu-icon"
+            ></i>
+            <span class="hidden md:inline">Felanmälningar</span>
+          </a>
+
+          <a
+            aria-label="Bannlysta individer"
+            href="#"
+            class="menu-link"
+          >
+            <i
+              data-lucide="ban"
+              class="menu-icon"
+            ></i>
+            <span class="hidden md:inline">Bannlysta individer</span>
+          </a>
+
+          <a
+            aria-label="Inställningar"
+            href="#"
+            class="menu-link"
+          >
+            <i
+              data-lucide="settings"
+              class="menu-icon"
+            ></i>
+            <span class="hidden md:inline">Inställningar</span>
+          </a>
+          <script src="https://unpkg.com/lucide@latest"></script>
+          <script>
+            lucide.createIcons();
+          </script>
+        </div>
+      </nav>
+
+      <main class="m-2 min-w-0 flex-1 bg-gray-900">
+        <div class="panel p-8">
+          <header
+            class="mb-6 text-4xl font-bold text-orange-500 [text-shadow:0_2px_4px_rgba(0,0,0,0.5)]"
+          >
+            <h1>Översikt</h1>
+          </header>
+
+          <section
+            class="CARDSnBADGES grid grid-cols-1 gap-2 text-white shadow-sm md:grid-cols-3"
+          >
+            <div class="dashboard-card">
+              <h2 class="mb-2 ml-2 text-xl">Dagsintäkter</h2>
+              <p class="ml-2 text-3xl font-bold">4 500 kr</p>
+            </div>
+
+            <div class="dashboard-card">
+              <h2 class="mb-2 ml-2 text-xl">Aktuell beläggning</h2>
+              <p class="ml-2 text-3xl font-bold">87%</p>
+
+              <div class="relative mx-auto h-4 rounded-full bg-gray-700">
+                <div
+                  class="bg-smartGreen absolute h-4 rounded-full border border-white"
+                  style="width: 87%"
+                ></div>
+
+                <span
+                  class="absolute text-xs font-bold text-white"
+                  style="left: 67%"
+                >
+                  87%
+                </span>
+              </div>
+            </div>
+
+            <div
+              class="dashboard-card border-smartRed flex flex-wrap items-center gap-5"
+            >
+              <div class="flex-1">
+                <h2 class="mb-2 ml-6 text-xl">Felanmälningar</h2>
+
+                <span
+                  class="text-smartRed ml-6 inline-block rounded-full bg-white px-2 text-3xl font-bold"
+                >
+                  3
+                </span>
+              </div>
+
+              <button class="action-button">Åtgärda</button>
+            </div>
+          </section>
+        </div>
+        <section>
+          <div class="panel mt-4 mb-4 min-w-0 p-8">
+            <h2
+              class="mb-6 text-3xl font-bold text-orange-500 [text-shadow:0_2px_4px_rgba(0,0,0,0.5)]"
+            >
+              Senaste parkeringar
+            </h2>
+
+            <table
+              class="min-w-full divide-y divide-amber-700 text-xl text-white"
+            >
+              <thead>
+                <tr class="text-left">
+                  <th scope="col">Regnr.</th>
+                  <th scope="col">Tid</th>
+                  <th scope="col">Ruta</th>
+                  <th scope="col">Status</th>
+                </tr>
+              </thead>
+
+              <tbody class="divide-y divide-amber-700">
+                <tr class="group">
+                  <td class="rounded-l-lg py-2 group-hover:bg-gray-600">
+                    ABC123
+                  </td>
+                  <td class="group-hover:bg-gray-600">10:00</td>
+                  <td class="group-hover:bg-gray-600">Ruta 4</td>
+                  <td class="rounded-r-lg group-hover:bg-gray-600">
+                    <span
+                      class="bg-smartGreen rounded-full border border-white px-3 py-1 font-bold"
+                    >
+                      <span class="sr-only">Status: </span>
+                      Aktiv
+                    </span>
+                  </td>
+                </tr>
+                <tr class="hover:bg-gray-600">
+                  <td class="py-2">ABC123</td>
+                  <td>10:00</td>
+                  <td>Ruta 2</td>
+                  <td>
+                    <span
+                      class="bg-smartGreen rounded-full border border-white px-3 py-1 font-bold"
+                    >
+                      <span class="sr-only">Status: </span>
+                      Aktiv
+                    </span>
+                  </td>
+                </tr>
+                <tr class="hover:bg-gray-600">
+                  <td class="py-2">ABC123</td>
+                  <td>10:33</td>
+                  <td>Ruta 3</td>
+                  <td>
+                    <span
+                      class="rounded-full bg-white px-3 py-1 font-bold text-black"
+                    >
+                      <span class="sr-only">Status: </span>
+                      Avslutad
+                    </span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- <section
+          class="CARDSnBADGES grid grid-cols-1 gap-4 text-gray-100 shadow-sm md:grid-cols-3"
+        >
+          <div
+            class="rounded-lg border border-gray-600 bg-gray-800 p-6 shadow-lg shadow-black/50"
+          >
+            <h2 class="mb-2 text-sm">Totala intäkter idag</h2>
+            <p class="text-3xl font-bold">4 500 kr</p>
+          </div> -->
+
+        <section>
+          <div class="panel flex flex-col gap-3 p-8 text-white">
+            <h2
+              class="text-3xl font-bold text-orange-500 [text-shadow:0_2px_4px_rgba(0,0,0,0.5)]"
+            >
+              Senaste Felanmälningarna
+            </h2>
+            <div
+              class="bg-smartRed flex flex-row items-center gap-4 rounded-lg border-2 p-6 shadow-lg shadow-black/50"
+            >
+              <h2 class="text-md mb-2 flex-1 text-xl">
+                Ruta 14: Laddstolpe ur funktion (kortslutning).
+              </h2>
+              <button class="action-button">Åtgärda</button>
+            </div>
+            <div
+              class="bg-smartRed flex flex-row items-center gap-4 rounded-lg border-2 p-6 shadow-lg shadow-black/50"
+            >
+              <h2 class="text-md mb-2 flex-1 text-xl">
+                Ruta 14: Kebab har petats in i parkeringsautomaterna (igen) och
+                nu även senap. Ur funktion! (kebabtrollen).
+              </h2>
+              <button class="action-button">Åtgärda</button>
+            </div>
+          </div>
+        </section>
+
+        <footer></footer>
+      </main>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,135 @@
+<!-- Layout -->
+<!-- CSS                         Tailwind -->
+display: flex                   flex
+display: grid                   grid
+display: block                  block
+display: inline-block           inline-block
+display: none                   hidden
+
+flex-direction: column          flex-col
+flex-direction: row             flex-row
+flex-wrap: wrap                 flex-wrap
+
+justify-content: center         justify-center
+justify-content: start          justify-start
+justify-content: end            justify-end
+justify-content: space-between  justify-between
+justify-content: space-around   justify-around
+
+align-items: center              items-center
+align-items: start               items-start
+align-items: end                 items-end
+align-items: stretch             items-stretch
+
+gap                             gap-*
+column-gap                      gap-x-*
+row-gap                         gap-y-*
+
+
+<!-- Size -->
+width: 100%                     w-full
+width: 50%                      w-1/2
+width: 25%                      w-1/4
+width: 16rem                    w-64
+
+height: 100%                    h-full
+height: 100vh                   h-screen
+min-height: 100vh               min-h-screen
+
+
+<!-- Spacing -->
+padding                         p-*
+padding-top                     pt-*
+padding-bottom                  pb-*
+padding-left                    pl-*
+padding-right                   pr-*
+padding-left/right              px-*
+padding-top/bottom              py-*
+
+margin                          m-*
+margin-top                      mt-*
+margin-bottom                   mb-*
+margin-left                     ml-*
+margin-right                    mr-*
+margin-left/right               mx-*
+margin-top/bottom               my-*
+
+margin: auto                    m-auto
+margin-left/right: auto         mx-auto
+
+
+<!-- Border -->
+border                          border
+border-width: 2px              border-2
+border-width: 4px              border-4
+
+border-radius                   rounded
+border-radius: 0.25rem         rounded-sm
+border-radius: 0.5rem          rounded-lg
+border-radius: 9999px          rounded-full
+
+border-top                      border-t
+border-bottom                   border-b
+border-left                     border-l
+border-right                    border-r
+
+border-color                    border-*
+border-color: red               border-red-500
+
+
+<!-- Colors -->
+background-color                bg-*
+background-color: white         bg-white
+background-color: black         bg-black
+background-color: blue          bg-blue-500
+
+color                           text-*
+color: white                    text-white
+color: black                    text-black
+color: gray                     text-gray-500
+
+
+<!-- Text -->
+font-weight: bold               font-bold
+font-weight: normal             font-normal
+
+font-size                       text-*
+font-size: small                text-sm
+font-size: large                text-lg
+font-size: 2xl                 text-2xl
+font-size: 3xl                 text-3xl
+
+text-align: center              text-center
+text-align: left                text-left
+text-align: right               text-right
+
+
+<!-- Effects -->
+box-shadow                      shadow
+box-shadow: large               shadow-lg
+
+opacity: 50%                    opacity-50
+
+cursor: pointer                 cursor-pointer
+
+
+<!-- Position -->
+position: relative              relative
+position: absolute              absolute
+position: fixed                fixed
+
+top                             top-*
+right                           right-*
+bottom                          bottom-*
+left                            left-*
+
+
+<!-- Responsive -->
+:hover                          hover:
+@media min-width: 768px        md:
+
+Examples:
+
+hover:bg-red-700
+md:flex-row
+md:grid-cols-3
